@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>{% block titulo %}{% endblock titulo %}</h1>
+    <ul>
+        <li>
+            <a href="{% url 'homepage:home_index' %}"> Go To Home Page</a>
+        </li>
+        <li>
+            <a href="{% url 'blog:home_blog' %}"> Go To Blog Home Page</a>
+        </li>
+        <li>
+            <a href="{% url 'blog:blog_authors' %}"> Go To Blog Authors</a>
+        </li>
+    </ul>
 </body>
+
 </html>

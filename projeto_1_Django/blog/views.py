@@ -6,3 +6,7 @@ def blog(request):
 
 def authors(request):
     return render(request= request, template_name= 'blog/authors.html')
+
+def posts(request, id):
+    context = {'posts' : posts}
+    return render(request= request, template_name= 'blog/index.html', context= context)
