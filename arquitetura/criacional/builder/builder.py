@@ -12,7 +12,7 @@ class User:
 class IUserBuilder(ABC):
     @property
     @abstractmethod
-    def result(self): ... # Essa propriedade vai acessar todas as da Entity
+    def result(self) -> User: ... # Essa propriedade vai acessar todas as da Entity
     
     @abstractmethod
     def add_name(self, name: str): ... # Métodos set
@@ -43,8 +43,8 @@ class UserBuilder(IUserBuilder):
     def add_age(self, idade: int):
         self._result._idade = idade
     
-    def add_phone(self, phone: str):
-        self._result._phnes.append(phone)
+    def add_phone(self, phone_number: str):
+        self._result._phnes.append(phone_number)
 
 # ----------------->> Classe Construtora <<-----------------
 class UserDirector:

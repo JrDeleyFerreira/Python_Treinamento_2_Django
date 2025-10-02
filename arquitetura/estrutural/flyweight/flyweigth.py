@@ -1,11 +1,12 @@
 from __future__ import annotations
-from typing import List, Dict
+from typing import Any, List, Dict
 
 # --->> Usuário externo à aplicação
 class Cliente:
     def __init__(self, nome: str) -> None:
         self._nome = nome
-        self._addresses: List = []
+        self._addresses: List[Address] = [] 
+        
     # Extrinsic
         self.address_number: int
         self.address_details: str
@@ -31,10 +32,10 @@ class Address:
 class AddressFactory:
     _addresses_fac: Dict = {} # Objeto proc flyweight
     
-    def _get_key(self, **kwargs) -> str:
+    def _get_key(self, **kwargs: Any) -> str:
         return ''.join(kwargs.values())
     
-    def get_address(self, **kwargs) -> Address:
+    def get_address(self, **kwargs: Any) -> Address:
         key = self._get_key(**kwargs)
         
         try:

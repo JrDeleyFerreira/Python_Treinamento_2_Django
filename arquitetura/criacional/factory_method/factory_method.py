@@ -26,7 +26,7 @@ class MotoPopular(Veiculo): # Classe concreta
         
 # --------------->> Classe abstrata (Filha) <<---------------     
 class VeiculoFactory(ABC): # Não é mais instanciável, apenas disponibiliza a função comum
-    def __init__(self, tipo) -> None:
+    def __init__(self, tipo: str) -> None:
         self._carro = self.get_type_car(tipo= tipo)
         
     def _busca_cliente(self) -> None:

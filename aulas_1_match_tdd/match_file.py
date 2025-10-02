@@ -1,4 +1,4 @@
-def verificacao(command):
+def verificacao(command: str) -> None:
     match command:
         case 'cd':
             print('Comando cd digitado.')
