@@ -164,3 +164,4 @@ cython_debug/
 # Arquivos locais
 *.vscode
 *.sqlite3
+*.vs/
